@@ -1,11 +1,10 @@
-# Hi, I'm Guruprasad VM 👋
+# Hi, I'm Guruprasad V M 👋
 
-**GenAI & Python backend engineer** · I build LLM-powered tools that real teams use every week: RAG pipelines, AI review automation and FastAPI services that hold up in production.
+**Software engineer · Generative AI & Python backend** — I build production-grade GenAI systems, RAG pipelines and Python REST services for global enterprise clients, with a focus on reliable, cost-efficient LLM engineering.
 
-- 🧠 ~4 years of software engineering, focused since 2024 on **GenAI, LLM engineering and RAG**
-- 🏢 I build enterprise AI and automation tools for **Japanese clients**, from prototype through production rollout
-- 🏆 Lead author of a research whitepaper on adaptive LLM routing that won a **Good Paper Award** and a **Bronze Star** (2026)
-- 📍 India · open to roles in Bengaluru, remote, or overseas
+- 🧠 **4+ years** of experience; my recent work is multi-step / agentic LLM pipelines, evaluation against real client data, and AI tools that non-technical users can run
+- 🏢 **Fujitsu** (Jan 2024 – present) · all projects delivered for Japanese enterprise clients
+- 🏆 **Platinum Award** (Fujitsu India GDC, 2026) · **Good Paper Award** (Fujitsu Convention 2026) · Silver & Bronze project-excellence awards
 - 📫 **guruprasad30122000@gmail.com**
 
 ---
@@ -58,36 +57,76 @@ Every repo here follows the same walkthrough. Open any of them and you'll find t
 
 ---
 
-## 💼 Professional work
+## 💼 Experience
 
-*Details are kept general because these systems belong to my clients.*
+### Fujitsu — Associate Technical Service Engineer (Software Engineer, Generative AI & Backend)
+*Jan 2024 – present · all projects delivered for Japanese clients*
 
-- **AI inspection pipeline.** A FastAPI dashboard that validates Japanese Excel inspection workbooks through rule-based L1/L2 checks and an LLM-based L3 review, then writes the verdicts back into the workbook. It re-checks only rows that changed, using hash-based row diffing over LanceDB snapshots, and ships as a packaged desktop build.
-- **LLM review automation.** A Flask tool that turns a weekly manual judgement process into an LLM-assisted run, with versioned prompts tracking the client's rule changes.
-- **AI-vs-human evaluation.** Ground-truth tooling that measures model verdicts against human reviewers, with F1 targets above 90%.
-- **Hybrid RAG for investigations.** FAISS and BM25 retrieval over internal knowledge, combined with Azure OpenAI and HuggingFace embeddings.
-- **Performance.** A vectorization optimization in FAISS that cut processing time by about **39%**.
+**Operational Efficiency Tool & Enterprise AI Platform** (Jun 2025 – present)
+- **Enterprise AI inspection-validation platform.** A FastAPI dashboard and backend that validates complex Japanese-language inspection spreadsheets (.xlsm) through a multi-layer engine: deterministic rule checks plus LLM-powered evaluation. It replaced slow, error-prone manual review.
+- **Multi-phase LLM evaluation pipeline.** Structured-output enforcement, a five-stage JSON-repair cascade, retry and relaxation logic, and global timeouts, which made it far more reliable under concurrent load.
+- **RAG with graceful degradation.** A RAG layer over LanceDB with a three-tier fallback (RAG → direct LLM → rule-based), so the system always returns a usable answer.
+- **Incremental evaluation engine.** Hash-based routing sends only new or changed rows through the LLM, removing redundant model calls and sharply cutting runtime on large files.
+- **AI evaluation & ground-truth loop.** Compares AI verdicts with client-verified human judgments (tracked as F1) and feeds the gaps back into the engine, raising accuracy release over release.
+- **Secure encrypted Excel processing.** Automated write-back to MIP-encrypted enterprise workbooks, with VBA macro preservation and subprocess isolation, in a locked-down compliance environment.
+- **Concurrency tuning & packaging.** Worker pools, batch sizing and token budgets; shipped as a self-contained ~120 MB Windows executable that runs without Python.
+- **Vector search APIs.** Python REST APIs over a FAISS vector store for similarity search and RAG. Optimising the vectorization pipeline cut processing time by **~39%**, approved as a formal Cost Saving Initiative.
+- **Asana workflow automation.** Standalone tools with secure API integration, retries, structured logging and audit traceability, cutting manual effort by **~35–45%** across projects.
+
+**OSS Development Project** (Aug 2024 – Jun 2025)
+- Led Power Automate initiatives and cloud-based solutions. **ServiceNow ticket automation** (email capture → SharePoint → Teams alerts) cut ticket response time by **~30%**, and the client recognised the parallel-execution optimisation.
+
+**WebUI Development Project** (Feb 2024 – Aug 2024)
+- JavaScript UI enhancements integrated with an enterprise LLM API to streamline client workflows, plus mentoring teammates.
+
+### Cognizant — Software Engineer Trainee
+*Jan 2022 – Aug 2023*
+- Built internal tooling for code analysis, performance monitoring and task automation, plus dashboards for project metrics
+- Acknowledged by the customer for contributions to a vulnerability-scanner project
+
+---
+
+## 🔬 Research & talks
+
+- **Co-authored a peer-reviewed whitepaper** on cost-reliability optimisation of enterprise LLMs: contextual-bandit model routing, conformal-prediction hallucination calibration and drift-aware feedback. Selected for Fujitsu Convention 2026; **Good Paper Award**
+- **Authored a whitepaper on AI-driven soil precision analysis**, which received a **Paper Award** at Fujitsu Convention 2025
+- Gave an internal **Tech Talk on AI-driven vulnerability analysis**
+
+---
+
+## 🏆 Awards
+
+- **Platinum Award**, Fujitsu India GDC Annual Award (Jul 2026), for ownership, innovative problem-solving and AI & automation delivery
+- **Good Paper Award**, Fujitsu Convention 2026
+- **Silver Award**, Core Contributions & Project Excellence (Apr 2026), for the AI inspection-validation platform and RAG pipeline
+- **Bronze Award**, Core Contributions & Project Excellence (2025), for the Operational Efficiency Tool and Power Automate initiatives
+- **Big Thank You Award** (2025), with client recognition for the Operational Efficiency Tool and OSS projects
+- **AI & DDM Award 2025**, Practical Case Competition (Fujitsu / 1EdTech certified)
+
+## 📜 Certifications
+
+- Google AI Professional Certificate (Google / Coursera, 2026)
+- Microsoft Azure Fundamentals (**AZ-900**)
+- Career Essentials in Generative AI (Microsoft & LinkedIn)
+- Ethics in the Age of Generative AI (LinkedIn Learning)
+- Clean Code (Udemy)
+- Fujitsu AI Agent Pilot Workshop (2026)
 
 ---
 
 ## 🧰 Tech stack
 
-- **AI / LLM:** RAG · prompt engineering · LangChain / LangGraph · Model Context Protocol · Azure OpenAI · Gemini · FAISS · LanceDB · BM25 · HuggingFace embeddings · XGBoost
-- **Backend:** Python · FastAPI · Flask · WebSockets · SQLAlchemy · REST API design · pytest
-- **Data & tools:** PostgreSQL · SQLite · openpyxl / Excel automation · PyInstaller · Git · Azure DevOps · GitHub Actions
-- **Earlier:** Java · Spring Boot
+- **Generative AI & LLM:** RAG · multi-step / agentic LLM pipelines · prompt engineering · LLM evaluation (ground truth, F1) · hallucination mitigation · confidence calibration · Azure OpenAI · Gemini · Model Context Protocol
+- **Vector search & data:** FAISS · LanceDB · hybrid retrieval (BM25 + dense) · HuggingFace embeddings (multilingual-e5) · PostgreSQL · SQLite
+- **Backend:** Python (asyncio, concurrency, type hints) · FastAPI · Flask · REST APIs · WebSockets · SQLAlchemy · pytest
+- **ML:** scikit-learn · XGBoost · TF-IDF
+- **Cloud & automation:** Microsoft Azure · AWS Lambda · Power Automate · Microsoft Graph API · ServiceNow · Asana API
+- **Tools & practices:** Git · Azure DevOps · Linux · PyInstaller · openpyxl / win32com · structured logging · retry logic · observability · CI · Agile/Scrum
+- **Also:** JavaScript · Bash · Java / Spring Boot
 
----
+## 🎓 Education
 
-## 📜 Recognition & certifications
-
-- **Good Paper Award** and **Bronze Star**, as lead author of a whitepaper on contextual-bandit LLM routing, conformal hallucination calibration and drift-aware feedback (2026)
-- **AI & DDM Award 2025** – Practical Case Competition
-- Microsoft Azure Fundamentals (**AZ-900**)
-- Google AI certification
-- Career Essentials in Generative AI (Microsoft & LinkedIn)
-- Ethics in the Age of Generative AI (LinkedIn Learning)
-- Clean Code (Udemy)
+**B.E., Mechatronics Engineering**, Sona College of Technology (Anna University), 2018 – 2022 · CGPA 8.6 / 10
 
 ---
 
